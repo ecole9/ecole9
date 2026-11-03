@@ -24,6 +24,9 @@
     .tile h3 { margin:0 0 6px; color:var(--blue); font-size:18px; }
     .muted { color:var(--muted); }
     .hours { display:inline-block; background:#e5f4eb; color:#17623a; border-radius:30px; padding:5px 13px; font-weight:bold; }
+    .portal-link { display:inline-block; margin-top:8px; padding:8px 13px; background:var(--blue); color:#fff; text-decoration:none; border-radius:8px; font-weight:bold; }
+    .portal-link:hover,.portal-link:focus { background:#0d4f86; }
+    .coming { display:inline-block; margin-top:8px; color:var(--muted); font-size:13px; }
     footer { text-align:center; padding:22px; color:#eaf2fb; background:#0b2948; }
     .notice { border-right:4px solid #d49a25; background:#fff8e8; padding:12px 15px; border-radius:8px; }
     @media (max-width:520px) { nav { justify-content:stretch; } nav a { flex:1 1 40%; text-align:center; } .hero,.panel { padding:19px; } }
@@ -53,12 +56,16 @@
     <section class="panel" id="services">
       <h2>فضاءات المنصة</h2>
       <div class="grid">
-        <article class="tile"><h3>الإدارة والمدير</h3><p>إدارة الحسابات والمستخدمين والصلاحيات ومتابعة نشاط المؤسسة.</p></article>
-        <article class="tile"><h3>مستشار التربية</h3><p>متابعة الانضباط والغيابات والتأخرات والاستدعاءات والتقارير اليومية.</p></article>
-        <article class="tile"><h3>الناظر</h3><p>متابعة السير التربوي وحضور الأساتذة والأقسام والتغطية.</p></article>
-        <article class="tile"><h3>المشرف</h3><p>متابعة التلاميذ والدخول والخروج والساحة والملاحظات اليومية.</p></article>
-        <article class="tile"><h3>الأستاذ</h3><p>فضاء مخصص للأقسام المسندة إليه والعلامات والغيابات.</p></article>
-        <article class="tile"><h3>الولي</h3><p>متابعة الأبناء والغيابات والتأخرات والنتائج والإعلانات.</p></article>
+        <article class="tile">
+          <h3>الإدارة والمدير</h3>
+          <p>إدارة الحسابات والمستخدمين والصلاحيات ومتابعة نشاط المؤسسة.</p>
+          <a class="portal-link" href="admin.html">فتح لوحة تحكم المدير</a>
+        </article>
+        <article class="tile"><h3>مستشار التربية</h3><p>متابعة الانضباط والغيابات والتأخرات والاستدعاءات والتقارير اليومية.</p><span class="coming">فضاء قيد التطوير</span></article>
+        <article class="tile"><h3>الناظر</h3><p>متابعة السير التربوي وحضور الأساتذة والأقسام والتغطية.</p><span class="coming">فضاء قيد التطوير</span></article>
+        <article class="tile"><h3>المشرف</h3><p>متابعة التلاميذ والدخول والخروج والساحة والملاحظات اليومية.</p><span class="coming">فضاء قيد التطوير</span></article>
+        <article class="tile"><h3>الأستاذ</h3><p>فضاء مخصص للأقسام المسندة إليه والعلامات والغيابات.</p><span class="coming">فضاء قيد التطوير</span></article>
+        <article class="tile"><h3>الولي</h3><p>متابعة الأبناء والغيابات والتأخرات والنتائج والإعلانات.</p><span class="coming">فضاء قيد التطوير</span></article>
       </div>
     </section>
 
