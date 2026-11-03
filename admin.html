@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="لوحة إدارة منصة Ecole9"><title>Ecole9 | لوحة المدير</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header class="topbar"><div><h1>🏫 Ecole9</h1><p>لوحة تحكم المدير</p></div><a class="back" href="index.html">العودة إلى الواجهة الرئيسية</a></header>
+<div class="layout">
+<aside class="sidebar"><h2>القائمة</h2><a class="active" href="#overview">الرئيسية</a><a href="#accounts">إدارة الحسابات</a><a href="#permissions">الصلاحيات</a><a href="#reports">التقارير</a><p class="side-note">نسخة تجريبية للواجهة</p></aside>
+<main>
+<section id="overview" class="welcome"><h2>مرحبًا بك، أيها المدير</h2><p>نظرة عامة على تسيير المؤسسة المدرسية.</p></section>
+<section class="stats">
+<article><span>الحسابات التجريبية</span><strong id="totalCount">0</strong></article>
+<article><span>الأساتذة</span><strong id="teacherCount">0</strong></article>
+<article><span>الأولياء</span><strong id="parentCount">0</strong></article>
+<article><span>الموظفون</span><strong id="staffCount">0</strong></article>
+</section>
+<section id="accounts" class="panel">
+<div class="section-head"><div><h2>إدارة الحسابات</h2><p>إضافة حساب تجريبي وعرضه في هذه الصفحة.</p></div></div>
+<form id="accountForm">
+<label>الاسم الكامل<input id="fullName" required maxlength="80" placeholder="مثال: محمد أحمد"></label>
+<label>البريد الإلكتروني<input id="email" type="email" required maxlength="120" placeholder="name@example.com"></label>
+<label>نوع الحساب<select id="role"><option value="teacher">أستاذ</option><option value="parent">ولي</option><option value="staff">موظف إداري</option></select></label>
+<button type="submit">إضافة الحساب التجريبي</button>
+</form>
+<div class="table-wrap"><table><thead><tr><th>الاسم</th><th>البريد الإلكتروني</th><th>نوع الحساب</th><th>إجراء</th></tr></thead><tbody id="accountRows"><tr><td colspan="4" class="empty">لا توجد حسابات تجريبية بعد.</td></tr></tbody></table></div>
+</section>
+<section id="permissions" class="panel"><h2>الصلاحيات حسب الدور</h2><div class="permission-grid">
+<article><h3>المدير</h3><p>إدارة الحسابات والصلاحيات ومتابعة جميع أقسام المنصة.</p></article>
+<article><h3>الموظف الإداري</h3><p>صلاحيات محددة يمنحها المدير حسب المهام.</p></article>
+<article><h3>الأستاذ</h3><p>الاطلاع على الأقسام والتلاميذ المسندين إليه فقط.</p></article>
+<article><h3>الولي</h3><p>الاطلاع على معلومات أبنائه المرتبطين بحسابه فقط.</p></article>
+</div></section>
+<section id="reports" class="panel"><h2>التقارير</h2><p>سيتم ربط تقارير الغيابات والحوادث والمتابعة بقاعدة بيانات آمنة في مرحلة الخادم.</p></section>
+<p class="warning"><strong>تنبيه أمني:</strong> هذه واجهة أولية فقط. الحسابات المضافة هنا تجريبية وتبقى في ذاكرة المتصفح لهذا الجهاز. لا يوجد تسجيل دخول حقيقي أو قاعدة بيانات أو حماية صلاحيات على الخادم. لا تدخل بيانات تلاميذ حقيقية أو كلمات مرور.</p>
+</main></div>
+<footer>© 2026 Ecole9 — لوحة الإدارة التجريبية</footer>
+<script src="admin.js"></script>
+</body></html>
