@@ -1,107 +1,90 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مدرسة Ecole9</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f7fb;
-            color: #333;
-        }
-
-        header {
-            background: #145da0;
-            color: white;
-            text-align: center;
-            padding: 30px;
-        }
-
-        nav {
-            background: #0b3d70;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 12px;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-            background: #dceeff;
-        }
-
-        .hero h2 {
-            color: #145da0;
-        }
-
-        .section {
-            background: white;
-            margin: 20px;
-            padding: 25px;
-            border-radius: 12px;
-        }
-
-        footer {
-            background: #145da0;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ecole9 - منصة تسيير المؤسسة المدرسية">
+  <title>Ecole9 | المنصة المدرسية</title>
+  <style>
+    :root { --navy:#123b68; --blue:#1769aa; --pale:#edf5fc; --ink:#203047; --muted:#64748b; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Tahoma,Arial,sans-serif; background:#f4f7fb; color:var(--ink); line-height:1.7; }
+    header { background:linear-gradient(125deg,#0d2d50,#1769aa); color:white; padding:28px 18px; text-align:center; }
+    header h1 { margin:0; font-size:clamp(28px,5vw,42px); }
+    header p { margin:8px 0 0; opacity:.92; }
+    nav { background:#0b2948; display:flex; justify-content:center; flex-wrap:wrap; gap:8px; padding:10px; }
+    nav a { color:white; text-decoration:none; padding:8px 13px; border-radius:7px; }
+    nav a:hover, nav a:focus { background:#244e78; }
+    main { width:min(100% - 28px,1000px); margin:26px auto; }
+    .hero, .panel { background:white; border-radius:15px; padding:24px; margin-bottom:18px; box-shadow:0 5px 20px #1e3a5f0d; }
+    .hero { background:var(--pale); text-align:center; padding:38px 22px; }
+    h2 { color:var(--navy); margin-top:0; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; }
+    .tile { background:#f8fbff; border:1px solid #e1eaf4; border-radius:12px; padding:16px; }
+    .tile h3 { margin:0 0 6px; color:var(--blue); font-size:18px; }
+    .muted { color:var(--muted); }
+    .hours { display:inline-block; background:#e5f4eb; color:#17623a; border-radius:30px; padding:5px 13px; font-weight:bold; }
+    footer { text-align:center; padding:22px; color:#eaf2fb; background:#0b2948; }
+    .notice { border-right:4px solid #d49a25; background:#fff8e8; padding:12px 15px; border-radius:8px; }
+    @media (max-width:520px) { nav { justify-content:stretch; } nav a { flex:1 1 40%; text-align:center; } .hero,.panel { padding:19px; } }
+  </style>
 </head>
-
 <body>
+  <header>
+    <h1>🏫 Ecole9</h1>
+    <p>المنصة الرقمية لتسيير المؤسسة المدرسية</p>
+  </header>
 
-<header>
-    <h1>🏫 مدرسة Ecole9</h1>
-    <p>العلم نور والمستقبل يبدأ من هنا</p>
-</header>
-
-<nav>
+  <nav aria-label="القائمة الرئيسية">
     <a href="#home">الرئيسية</a>
-    <a href="#about">عن المدرسة</a>
-    <a href="#levels">المستويات</a>
-    <a href="#news">الإعلانات</a>
-    <a href="#contact">اتصل بنا</a>
-</nav>
+    <a href="#services">الخدمات</a>
+    <a href="#reports">التقارير</a>
+    <a href="#schedule">أوقات العمل</a>
+    <a href="#contact">معلومات المنصة</a>
+  </nav>
 
-<section class="hero" id="home">
-    <h2>مرحبًا بكم في مدرسة Ecole9</h2>
-    <p>معًا نحو مستقبل أفضل بالعلم والمعرفة</p>
-</section>
+  <main>
+    <section class="hero" id="home">
+      <h2>مرحبًا بكم في Ecole9</h2>
+      <p>فضاء رقمي لتنظيم العمل المدرسي وربط الإدارة والأساتذة والأولياء.</p>
+      <p><span class="hours">أوقات العمل: الأحد إلى الخميس، 08:00 – 17:00</span></p>
+    </section>
 
-<section class="section" id="about">
-    <h2>عن المدرسة</h2>
-    <p>مدرستنا فضاء للتعلم والإبداع وتنمية المواهب.</p>
-</section>
+    <section class="panel" id="services">
+      <h2>فضاءات المنصة</h2>
+      <div class="grid">
+        <article class="tile"><h3>الإدارة والمدير</h3><p>إدارة الحسابات والمستخدمين والصلاحيات ومتابعة نشاط المؤسسة.</p></article>
+        <article class="tile"><h3>مستشار التربية</h3><p>متابعة الانضباط والغيابات والتأخرات والاستدعاءات والتقارير اليومية.</p></article>
+        <article class="tile"><h3>الناظر</h3><p>متابعة السير التربوي وحضور الأساتذة والأقسام والتغطية.</p></article>
+        <article class="tile"><h3>المشرف</h3><p>متابعة التلاميذ والدخول والخروج والساحة والملاحظات اليومية.</p></article>
+        <article class="tile"><h3>الأستاذ</h3><p>فضاء مخصص للأقسام المسندة إليه والعلامات والغيابات.</p></article>
+        <article class="tile"><h3>الولي</h3><p>متابعة الأبناء والغيابات والتأخرات والنتائج والإعلانات.</p></article>
+      </div>
+    </section>
 
-<section class="section" id="levels">
-    <h2>المستويات الدراسية</h2>
-    <p>نوفر بيئة تعليمية تساعد التلاميذ على النجاح والتفوق.</p>
-</section>
+    <section class="panel" id="reports">
+      <h2>التقارير والمتابعة</h2>
+      <div class="grid">
+        <article class="tile"><h3>التقرير اليومي لمستشار التربية</h3><p>تسجيل الأحداث التربوية والإجراءات المتخذة.</p></article>
+        <article class="tile"><h3>التقرير اليومي للناظر</h3><p>توثيق متابعة الدراسة والسير التربوي.</p></article>
+        <article class="tile"><h3>التقرير اليومي للمشرف</h3><p>تسجيل الملاحظات والمتابعة اليومية.</p></article>
+        <article class="tile"><h3>الحوادث المدرسية</h3><p>سجل للحوادث مع بياناتها والإجراءات والمتابعة وإمكانية إعداد تقارير.</p></article>
+      </div>
+    </section>
 
-<section class="section" id="news">
-    <h2>الإعلانات والأخبار</h2>
-    <p>تابعوا هنا آخر أخبار المدرسة وإعلاناتها.</p>
-</section>
+    <section class="panel" id="schedule">
+      <h2>أوقات إتاحة المنصة</h2>
+      <p>الأحد إلى الخميس من الساعة <strong>08:00</strong> إلى <strong>17:00</strong>.</p>
+      <p class="muted">هذا الجدول وصف مبدئي فقط. تقييد الدخول الفعلي حسب الوقت سيُنفّذ لاحقًا على الخادم، وليس في هذه الصفحة وحدها.</p>
+    </section>
 
-<section class="section" id="contact">
-    <h2>اتصل بنا</h2>
-    <p>مرحبًا بكم، يسعدنا التواصل معكم.</p>
-</section>
+    <section class="panel" id="contact">
+      <h2>معلومات المنصة</h2>
+      <p>اسم المنصة الحالي: <strong>Ecole9</strong>.</p>
+      <p class="notice">هذه نسخة أولية للواجهة فقط. لا تحتوي على تسجيل دخول حقيقي أو قاعدة بيانات أو إرسال إشعارات. لا تُدخل فيها أسماء التلاميذ أو أرقامهم أو أي معلومات مدرسية خاصة قبل إعداد الخادم والحماية.</p>
+    </section>
+  </main>
 
-<footer>
-    <p>جميع الحقوق محفوظة © 2026 مدرسة Ecole9</p>
-</footer>
-
+  <footer>© 2026 Ecole9 — جميع الحقوق محفوظة</footer>
 </body>
 </html>
-
